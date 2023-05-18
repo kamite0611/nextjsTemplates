@@ -1,5 +1,5 @@
 // @mui
-import { Noto_Sans_JP } from '@next/font/google';
+import { Noto_Sans_JP } from 'next/font/google';
 
 import { GlobalStyles as MUIGlobalStyles } from '@mui/material';
 
