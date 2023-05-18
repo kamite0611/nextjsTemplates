@@ -6,5 +6,9 @@
     "source.fixAll.eslint": true,
     "source.fixAll.sortJSON": false
   },
-  "eslint.workingDirectories": [{ "pattern": "./basic" }]
+  "eslint.workingDirectories": [
+    { "pattern": "./basic" },
+    { "pattern": "./mui" },
+    { "pattern": "./mui+tailwind" }
+  ]
 }
