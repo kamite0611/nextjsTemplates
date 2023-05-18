@@ -1,16 +1,11 @@
-'use client';
 import Link from 'next/link';
 
-import { Stack } from '@mui/material';
+type RootPageProps = {};
 
-type TopPageProps = {};
-
-export default function TopPage(props: TopPageProps) {
+export default function RootPage(props: RootPageProps) {
   return (
     <>
-      <Stack alignItems="center">
-        <Link href="/users">go to UserListPage</Link>
-      </Stack>
+      <Link href="/users">go to UserListPage</Link>
     </>
   );
 }

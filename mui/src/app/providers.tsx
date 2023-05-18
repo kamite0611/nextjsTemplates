@@ -6,12 +6,10 @@ type ProvidersProps = {
   children: ReactNode;
 };
 
-const Providers = (props: ProvidersProps) => {
+export default function Providers(props: ProvidersProps) {
   return (
     <>
       <ThemeProvider>{props.children}</ThemeProvider>
     </>
   );
-};
-
-export default Providers;
+}
