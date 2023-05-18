@@ -29,6 +29,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       <body>
         <Providers>
           <ScrollReset />
+          layout
           {children}
         </Providers>
       </body>

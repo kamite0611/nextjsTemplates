@@ -1,6 +1,6 @@
 ## Getting Started
 
-Basic + MUI
+Basic + MUI + tailwind
 
 App ディレクトリを使用しています
 
