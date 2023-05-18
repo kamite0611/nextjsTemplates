@@ -11,9 +11,5 @@ export const metadata: Metadata = {
 export default async function UserDetailPage() {
   const user = await findUser();
 
-  return (
-    <>
-      <UserDetail user={user} />
-    </>
-  );
+  return <UserDetail user={user} />;
 }

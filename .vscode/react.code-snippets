@@ -3,6 +3,11 @@
     "scope": "typescriptreact",
     "prefix": "pg",
     "body": [
+      "import { Metadata } from 'next';\n",
+      "import { SERVICE_NAME } from '@/config';\n",
+      "export const metadata: Metadata = {",
+      "  title: `$1 | \\${SERVICE_NAME}`,",
+      "};\n",
       "type ${1:$TM_FILENAME_BASE}PageProps = {",
       "}\n",
       "export default function $1Page(props: $1PageProps) {",

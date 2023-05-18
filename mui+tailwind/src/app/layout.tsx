@@ -1,10 +1,10 @@
 'use client';
 
-import '@/common/theme/tailwind.css';
+import '@/libs/nprogress/style.css';
 
 import { ReactNode } from 'react';
 
-import { CommonHead, ScrollReset } from '@/common/components';
+import { CommonHead } from '@/common/components';
 import { SERVICE_NAME } from '@/config';
 
 import Providers from './providers';
@@ -27,11 +27,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </head>
       <body>
-        <Providers>
-          <ScrollReset />
-          layout
-          {children}
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
