@@ -103,10 +103,7 @@ module.exports = {
             ],
             pathGroups: [
               { pattern: '**/devtools', group: 'type', position: 'after' },
-              { pattern: '{@/common,@/common/**}', group: 'type', position: 'before' },
-              { pattern: '{@/routes,@/config}', group: 'type', position: 'after' },
               { pattern: '@/**', group: 'internal', position: 'after' },
-              { pattern: '@/models', group: 'object' },
               { pattern: '{@mui/**,mdi-material-ui}', group: 'external', position: 'after' },
               { pattern: '{next,next/**}', group: 'builtin' },
               { pattern: '{react,react**}', group: 'builtin' },

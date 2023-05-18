@@ -4,11 +4,10 @@ import '@/common/theme/tailwind.css';
 
 import { ReactNode } from 'react';
 
-import Providers from './providers';
-
 import { CommonHead, ScrollReset } from '@/common/components';
-
 import { SERVICE_NAME } from '@/config';
+
+import Providers from './providers';
 
 type RootLayoutProps = {
   children: ReactNode;

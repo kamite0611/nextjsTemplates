@@ -16,8 +16,7 @@ export default function MyProgress(theme: Theme) {
           borderRadius: 4,
         },
         colorPrimary: {
-          backgroundColor:
-            theme.palette.primary[isLight ? 'lighter' : 'darker'],
+          backgroundColor: theme.palette.primary[isLight ? 'lighter' : 'darker'],
         },
         buffer: {
           backgroundColor: 'transparent',
