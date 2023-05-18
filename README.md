@@ -4,5 +4,7 @@ Next.js のよく使うテンプレートまとめ
 
 ```
 basic
-ESlint + Prettier + TypeScript
+- ESlint
+- Prettier
+- TypeScript
 ```
