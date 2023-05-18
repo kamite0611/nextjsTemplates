@@ -12,9 +12,10 @@ export default function MyCssBaseline(theme: Theme) {
           boxSizing: 'border-box',
         },
         html: {
+          margin: 0,
+          padding: 0,
           width: '100%',
           height: '100%',
-          WebkitOverflowScrolling: 'touch',
         },
         body: {
           width: '100%',
@@ -40,6 +41,13 @@ export default function MyCssBaseline(theme: Theme) {
         img: {
           display: 'block',
           maxWidth: '100%',
+        },
+        ul: {
+          margin: 0,
+          padding: 0,
+        },
+        a: {
+          textDecoration: 'none',
         },
       },
     },

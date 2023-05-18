@@ -108,30 +108,6 @@ module.exports = {
               { pattern: '{@/routes,@/config}', group: 'type', position: 'after' },
               { pattern: '@/**', group: 'internal', position: 'after' },
               { pattern: '@/models', group: 'object' },
-              {
-                pattern: '{@hui/types,@hui/types/**}',
-                group: 'internal',
-              },
-              {
-                pattern: '{@hui/utils,@hui/utils/**}',
-                group: 'internal',
-              },
-              {
-                pattern: '{@hui/libs,@hui/libs/**}',
-                group: 'internal',
-              },
-              {
-                pattern: '{@hui/hooks,@hui/hooks/**}',
-                group: 'internal',
-              },
-              {
-                pattern: '{@hui/contexts,@hui/contexts/**}',
-                group: 'internal',
-              },
-              {
-                pattern: '{@hui/components,@hui/components/**}',
-                group: 'internal',
-              },
               { pattern: '{@mui/**,mdi-material-ui}', group: 'external', position: 'after' },
               { pattern: '{next,next/**}', group: 'builtin' },
               { pattern: '{react,react**}', group: 'builtin' },

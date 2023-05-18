@@ -1,10 +1,28 @@
+import { Noto_Sans_JP, Roboto } from 'next/font/google';
+
 import { pxToRem, responsiveFontSizes } from '../utils/getFontValue';
 
 // ----------------------------------------------------------------------
 
-// const FONT_SECONDARY = 'CircularStd, sans-serif'; // Local Font
+const notoSansJp = Noto_Sans_JP({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+});
+
+const robot = Roboto({
+  weight: ['100', '300', '400', '500', '700', '900'],
+  subsets: ['latin'],
+});
+
+const generateFontFamily = () => {
+  const fonts = [robot, notoSansJp];
+  const fontFamilies = fonts.map((f) => f.style.fontFamily);
+
+  return fontFamilies.join(', ') + ', sans-serif';
+};
 
 const typography = {
+  fontFamily: generateFontFamily(),
   fontWeightRegular: 400,
   fontWeightMedium: 600,
   fontWeightBold: 700,
