@@ -2,11 +2,10 @@
 
 import { ReactNode } from 'react';
 
-import Providers from './providers';
-
 import { CommonHead } from '@/common/components';
-
 import { SERVICE_NAME } from '@/config';
+
+import Providers from './providers';
 
 type RootLayoutProps = {
   children: ReactNode;

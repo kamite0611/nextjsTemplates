@@ -1,9 +1,8 @@
 import { Metadata } from 'next';
 import React from 'react';
 
-import { UserDetail, findUser } from '@/models/User';
-
 import { SERVICE_NAME } from '@/config';
+import { UserDetail, findUser } from '@/models/User';
 
 export const metadata: Metadata = {
   title: `${SERVICE_NAME} ユーザー詳細`,

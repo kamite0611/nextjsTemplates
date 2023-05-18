@@ -3,14 +3,7 @@ import { alpha, Theme } from '@mui/material/styles';
 
 // ----------------------------------------------------------------------
 
-const COLORS = [
-  'primary',
-  'secondary',
-  'info',
-  'success',
-  'warning',
-  'error',
-] as const;
+const COLORS = ['primary', 'secondary', 'info', 'success', 'warning', 'error'] as const;
 
 // NEW VARIANT
 declare module '@mui/material/Fab' {
@@ -135,9 +128,7 @@ export default function MyFab(theme: Theme) {
     };
 
     const size = {
-      ...((extendedVariant ||
-        outlinedExtendedVariant ||
-        softExtendedVariant) && {
+      ...((extendedVariant || outlinedExtendedVariant || softExtendedVariant) && {
         '& svg': {
           marginRight: theme.spacing(1),
           ...(ownerState.size === 'small' && {
@@ -193,8 +184,7 @@ export default function MyFab(theme: Theme) {
       },
 
       styleOverrides: {
-        root: ({ ownerState }: { ownerState: FabProps }) =>
-          rootStyle(ownerState),
+        root: ({ ownerState }: { ownerState: FabProps }) => rootStyle(ownerState),
       },
     },
   };

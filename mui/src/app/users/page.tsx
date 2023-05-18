@@ -1,6 +1,5 @@
-import { UserList, getUsers } from '@/models/User';
-
 import { SERVICE_NAME } from '@/config';
+import { UserList, getUsers } from '@/models/User';
 
 export const metadata = {
   title: `${SERVICE_NAME} 顧客リスト`,
