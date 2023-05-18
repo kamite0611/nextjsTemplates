@@ -1,6 +1,6 @@
 ## Getting Started
 
-TypeScript + ESlint + Prettier
+Basic + MUI
 
 App ディレクトリを使用しています
 
