@@ -1,5 +1,7 @@
 'use client';
 
+import '@/libs/nprogress/style.css';
+
 import { ReactNode } from 'react';
 
 import { CommonHead } from '@/common/components';

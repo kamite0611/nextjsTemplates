@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const LoadingScreen = () => <div>LoadingScreen</div>;
+export const LoadingScreen = () => {
+  return <div>LoadingScreen</div>;
+};

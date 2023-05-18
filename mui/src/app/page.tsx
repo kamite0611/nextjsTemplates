@@ -5,7 +5,9 @@ type RootPageProps = {};
 export default function RootPage(props: RootPageProps) {
   return (
     <>
-      <Link href="/users">go to UserListPage</Link>
+      <Link href="/users" className="mb-1">
+        go to UserListPage
+      </Link>
     </>
   );
 }

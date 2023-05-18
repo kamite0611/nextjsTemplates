@@ -1,17 +1,14 @@
+import { Metadata } from 'next';
+
 import { SERVICE_NAME } from '@/config';
 import { UserList, getUsers } from '@/models/User';
 
-export const metadata = {
-  title: `${SERVICE_NAME} 顧客リスト`,
+export const metadata: Metadata = {
+  title: `UserList | ${SERVICE_NAME}`,
 };
 
 type UserListPageProps = {};
-
 export default async function UserListPage(props: UserListPageProps) {
   const users = await getUsers();
-  return (
-    <>
-      <UserList users={users} />
-    </>
-  );
+  return <UserList users={users} />;
 }
