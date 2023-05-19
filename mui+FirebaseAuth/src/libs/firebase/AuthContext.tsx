@@ -38,7 +38,11 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(reducer, initialAuthState);
 
   const login = async () => {
-    await signInWithPopup(FirebaseAuth, new GoogleAuthProvider());
+    try {
+      await signInWithPopup(FirebaseAuth, new GoogleAuthProvider());
+    } catch {
+      // TODO add error msg
+    }
   };
 
   const logout = () => {

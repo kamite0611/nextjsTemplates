@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 import { Button, Stack } from '@mui/material';
 
-import useAuth from '@/libs/firebase/useAuth';
+import { useAuth } from '@/libs/firebase';
 
 type RootPageProps = {};
 
