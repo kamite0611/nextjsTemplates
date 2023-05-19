@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 
 import ThemeProvider from '@/common/theme';
+import { AuthProvider } from '@/libs/firebase/AuthContext';
 
 type ProvidersProps = {
   children: ReactNode;
@@ -9,7 +10,9 @@ type ProvidersProps = {
 export default function Providers(props: ProvidersProps) {
   return (
     <>
-      <ThemeProvider>{props.children}</ThemeProvider>
+      <AuthProvider>
+        <ThemeProvider>{props.children}</ThemeProvider>
+      </AuthProvider>
     </>
   );
 }
