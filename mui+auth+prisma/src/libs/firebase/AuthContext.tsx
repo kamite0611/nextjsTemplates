@@ -51,8 +51,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(FirebaseAuth, async (user) => {
-      console.log('user', user);
-
       try {
         if (!user) throw 'user not found';
         dispatch({

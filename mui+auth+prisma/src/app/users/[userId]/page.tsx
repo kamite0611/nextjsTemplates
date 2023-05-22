@@ -8,8 +8,13 @@ export const metadata: Metadata = {
   title: `${SERVICE_NAME} ユーザー詳細`,
 };
 
-export default async function UserDetailPage() {
-  const user = await findUser();
+type UserDetailPageProps = {
+  params: { userId: string };
+};
+
+export default async function UserDetailPage({ params }: UserDetailPageProps) {
+  const { userId } = params;
+  const user = await findUser(userId);
 
   return <UserDetail user={user} />;
 }

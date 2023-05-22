@@ -1,5 +1,4 @@
-export interface IUser {
-  id: string;
-  name: string;
+export type UserNew = {
   email: string;
-}
+  name: string;
+};

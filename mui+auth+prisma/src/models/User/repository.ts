@@ -1,31 +1,33 @@
-import { nanoid } from 'nanoid';
+import { User } from '@prisma/client';
 
-import { IUser } from './type';
+import { genID } from '@/libs/nanoid';
+import { prisma } from '@/libs/prisma';
 
-export const getUsers = async (): Promise<IUser[]> => {
-  return [
-    {
-      id: nanoid(),
-      name: 'User1',
-      email: 'testuser1@example.com',
-    },
-    {
-      id: nanoid(),
-      name: 'User2',
-      email: 'testuser2@example.com',
-    },
-    {
-      id: nanoid(),
-      name: 'User3',
-      email: 'testuser3@example.com',
-    },
-  ];
+import { UserNew } from './type';
+
+export const getUsers = async (): Promise<User[]> => {
+  const users = await prisma.user.findMany();
+  return users;
 };
 
-export const findUser = async (): Promise<IUser> => {
-  return {
-    id: nanoid(),
-    name: 'User1',
-    email: 'testuser1@example.com',
-  };
+export const findUser = async (id: string): Promise<User | null> => {
+  const user = await prisma.user.findUnique({
+    where: {
+      id,
+    },
+  });
+
+  return user;
+};
+
+export const createUser = async (data: UserNew): Promise<User> => {
+  const user = await prisma.user.create({
+    data: {
+      id: genID(),
+      name: data.name,
+      email: data.email,
+    },
+  });
+
+  return user;
 };
