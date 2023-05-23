@@ -4,7 +4,7 @@ import '@/libs/nprogress/style.css';
 
 import { ReactNode } from 'react';
 
-import { CommonHead } from '@/common/components';
+import { CommonHead } from '@/components';
 import { SERVICE_NAME } from '@/config';
 
 import Providers from './providers';
