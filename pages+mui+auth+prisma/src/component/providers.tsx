@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import ThemeProvider from '@/common/theme';
+import ThemeProvider from '@/theme';
 
 type ProvidersProps = {
   children: ReactNode;

@@ -1,6 +1,10 @@
-import { NextPage } from "next";
-import { AppProps } from "next/app";
-import { ReactElement, ReactNode } from "react";
+import { NextPage } from 'next';
+import { AppProps } from 'next/app';
+import { ReactElement, ReactNode } from 'react';
+
+import Layout from '@/component/layout';
+import Providers from '@/component/providers';
+import { AuthProvider } from '@/libs/firebase';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -21,3 +25,4 @@ export default function MyApp(props: MyAppProps) {
       </AuthProvider>
     </>
   );
+}
