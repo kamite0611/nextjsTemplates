@@ -2,29 +2,24 @@
 
 import { Button, TextField } from '@mui/material';
 
+import { useFetch } from '@/common/hooks/useFetch';
+
 import { UserNew } from '../type';
 
 type UserNewProps = {
   defaultValue?: Partial<UserNew>;
-  onSubmit: (data: UserNew) => void;
 };
 
-export const UserNewForm = ({ onSubmit }: UserNewProps) => {
+export const UserNewForm = ({}: UserNewProps) => {
+  useFetch();
+  console.log('UserListPage reloaded');
+
   return (
     <>
       <TextField />
       <TextField />
 
-      <Button
-        onClick={() =>
-          onSubmit({
-            email: 'test@example.com',
-            name: 'sample',
-          })
-        }
-      >
-        作成
-      </Button>
+      <Button onClick={() => {}}>作成</Button>
     </>
   );
 };
