@@ -1,10 +1,11 @@
 import React from 'react';
 
+import { User } from '@prisma/client';
+
 import { UserListItem } from './UserListItem';
-import { IUser } from '../type';
 
 type UserListProps = {
-  users: IUser[];
+  users: User[];
 };
 
 export const UserList = ({ users }: UserListProps) => {

@@ -1,9 +1,9 @@
 import React from 'react';
 
-import { IUser } from '../type';
+import { User } from '@prisma/client';
 
 type UserDetailProps = {
-  user: IUser;
+  user: User;
 };
 
 export const UserDetail = ({ user }: UserDetailProps) => {

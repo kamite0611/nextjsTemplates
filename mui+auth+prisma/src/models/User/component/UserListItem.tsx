@@ -1,10 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { IUser } from '../type';
+import { User } from '@prisma/client';
 
 type UserListItemProps = {
-  user: IUser;
+  user: User;
 };
 
 export const UserListItem = ({ user }: UserListItemProps) => {
