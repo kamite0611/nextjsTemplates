@@ -9,6 +9,7 @@
   "eslint.workingDirectories": [
     { "pattern": "./basic" },
     { "pattern": "./mui" },
-    { "pattern": "./mui+tailwind" }
+    { "pattern": "./mui+tailwind" },
+    { "pattern": "./pages+mui+auth+prisma" }
   ]
 }
