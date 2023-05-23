@@ -1,5 +1,3 @@
-'use client';
-
 import { Button, TextField } from '@mui/material';
 
 import { useFetch } from '@/common/hooks/useFetch';
@@ -12,7 +10,6 @@ type UserNewProps = {
 
 export const UserNewForm = ({}: UserNewProps) => {
   useFetch();
-  console.log('UserListPage reloaded');
 
   return (
     <>

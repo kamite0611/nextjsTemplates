@@ -1,5 +1,3 @@
-'use client';
-
 import '@/libs/nprogress/style.css';
 
 import { ReactNode } from 'react';

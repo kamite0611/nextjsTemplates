@@ -9,6 +9,7 @@ module.exports = {
     sourceType: 'module',
     ecmaVersion: 2021,
     tsconfigRootDir: __dirname,
+    project: ['./tsconfig.json'],
   },
   plugins: ['@typescript-eslint', 'unused-imports', 'import'],
   extends: ['next', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended', 'prettier'],

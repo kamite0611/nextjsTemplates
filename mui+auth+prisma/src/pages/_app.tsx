@@ -2,7 +2,9 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 
-import Layout from '@/app/layout';
+import Layout from '@/components/layout';
+import Providers from '@/components/providers';
+import { AuthProvider } from '@/libs/firebase';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;
@@ -12,9 +14,15 @@ interface MyAppProps extends AppProps {
 }
 
 export default function MyApp(props: MyAppProps) {
-  const { Component, pageProps, router } = props;
+  const { Component, pageProps } = props;
 
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
 
-  return <></>;
+  return (
+    <>
+      <AuthProvider>
+        <Providers>{getLayout(<Component {...pageProps} />)}</Providers>
+      </AuthProvider>
+    </>
+  );
 }
