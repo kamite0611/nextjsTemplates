@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 
-import Layout from '@/component/layout';
-import Providers from '@/component/providers';
+import Layout from '@/components/layout';
+import Providers from '@/components/providers';
 import { AuthProvider } from '@/libs/firebase';
 
 type NextPageWithLayout = NextPage & {
