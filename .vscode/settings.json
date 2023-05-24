@@ -10,6 +10,7 @@
     { "pattern": "./basic" },
     { "pattern": "./mui" },
     { "pattern": "./mui+tailwind" },
-    { "pattern": "./pages+mui+auth+prisma" }
+    { "pattern": "./pages+mui+auth+prisma" },
+    { "pattern": "./rhf" }
   ]
 }
