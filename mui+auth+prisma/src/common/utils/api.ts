@@ -4,7 +4,7 @@ import { LackParamsError } from '../constant';
 
 type Methods = 'GET' | 'POST';
 
-interface ResponseError extends Error {
+export interface ResponseError extends Error {
   status?: number;
 }
 

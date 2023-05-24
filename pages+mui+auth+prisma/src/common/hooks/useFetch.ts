@@ -12,6 +12,7 @@ interface FetchConfig extends RequestInit {
 export const useFetch = () => {
   const { isInitialized, currentUser } = useAuth();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<any | null>(null);
 
   async function getAuthToken(): Promise<string | null> {
     if (!isInitialized) {
@@ -34,13 +35,23 @@ export const useFetch = () => {
     try {
       setLoading(true);
       const res = await fetch(url, options);
-      setLoading(false);
+      const result = (await res.json()) as never as FormedResponse<T>;
 
-      return res.json() as never as FormedResponse<T>;
+      if (result.error) {
+        setError(result.error);
+        throw Error(result.error.message);
+      }
+
+      setLoading(false);
+      return result;
     } catch (error) {
       setLoading(false);
-      console.log('fetchRequest error', error);
-      throw Error;
+
+      /**
+       * TODO add common error handling
+       */
+
+      throw Error(error.message);
     }
   }
 
@@ -82,5 +93,6 @@ export const useFetch = () => {
     post,
     destroy,
     loading,
+    error,
   };
 };
