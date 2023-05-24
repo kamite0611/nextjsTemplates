@@ -1,13 +1,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { User } from '@prisma/client';
-
 import { handleApiRoute } from '@/common/utils';
-import { createUser } from '@/models/User';
-import { UserNew } from '@/models/User/type';
+import { IUser, UserNew, createUser } from '@/models/User';
 
 type PostReq = UserNew;
-type PostRes = User;
+type PostRes = IUser;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   /** Userの作成 */

@@ -1,12 +1,12 @@
 import Link from 'next/link';
 import React from 'react';
 
-import { User } from '@prisma/client';
-
 import { Stack } from '@mui/material';
 
+import { IUser } from '../type';
+
 type UserListItemProps = {
-  user: User;
+  user: IUser;
 };
 
 export const UserListItem = ({ user }: UserListItemProps) => {

@@ -1,12 +1,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-import { User } from '@prisma/client';
-
 import { handleApiRoute } from '@/common/utils';
 import { prisma } from '@/libs/prisma';
+import { IUser } from '@/models/User';
 
 type DeleteReq = null;
-type DeleteRes = User;
+type DeleteRes = IUser;
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   /** Userの削除 */

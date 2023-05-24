@@ -1,14 +1,13 @@
 import React from 'react';
 
-import { User } from '@prisma/client';
-
 import { DeleteOutline } from '@mui/icons-material';
 import { IconButton, Stack } from '@mui/material';
 
 import { UserListItem } from './UserListItem';
+import { IUser } from '../type';
 
 type UserListProps = {
-  users: User[];
+  users: IUser[];
   onDelete?: (userId: string) => void;
 };
 
