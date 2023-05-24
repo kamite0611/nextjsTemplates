@@ -1,6 +1,14 @@
-import { FormFieldSettingList } from '@/libs/form';
+import {
+  FormFieldSettingList,
+  filterFormField,
+  getDefaultValues,
+  yupSchemeSetting,
+} from '@/libs/form';
 
-export const userFields: FormFieldSettingList = {
+/**
+ * Userのフォーム情報を設定
+ */
+export const UserFields: FormFieldSettingList = {
   id: {
     key: 'id',
     fieldType: 'text',
@@ -16,7 +24,7 @@ export const userFields: FormFieldSettingList = {
     dataType: 'string',
     label: 'メールアドレス',
     required: true,
-    placeholder: '',
+    placeholder: '*******@example.com',
     defaultValue: '',
   },
   name: {
@@ -24,8 +32,16 @@ export const userFields: FormFieldSettingList = {
     fieldType: 'text',
     dataType: 'string',
     label: '名前',
+    placeholder: '田中 太郎',
+    helper: 'hogehoge',
     required: true,
-    placeholder: '',
     defaultValue: '',
   },
 };
+
+/**
+ * ユーザー新規登録フォームの設定
+ */
+export const UserNewFields = filterFormField(UserFields, ['email', 'name']);
+export const UserNewDefaultValues = getDefaultValues(UserNewFields);
+export const UserNewYupScheme = yupSchemeSetting(UserNewFields);

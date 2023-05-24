@@ -1,3 +1,12 @@
+export const InputLabelProps = {
+  sx: {
+    backgroundColor: 'white',
+    left: '-6px',
+    padding: '2px 24px 0 8px',
+  },
+  required: false,
+};
+
 /**
  * よく使うバリデーション
  */

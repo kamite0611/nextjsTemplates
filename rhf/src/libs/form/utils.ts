@@ -226,3 +226,15 @@ export const mergeArrayFieldsSchema = (
   });
   return parentSchema;
 };
+
+export const filterFormField = (parentField: FormFieldSettingList, keyNames: string[]) => {
+  const resultField: FormFieldSettingList = {};
+  keyNames.map((keyName) => {
+    const field = parentField[keyName];
+    if (!field) throw Error(`${keyName}が見つかりません`);
+
+    resultField[keyName] = field;
+  });
+
+  return resultField;
+};
