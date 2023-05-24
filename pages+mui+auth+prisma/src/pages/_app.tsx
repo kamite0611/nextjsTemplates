@@ -2,6 +2,7 @@ import { NextPage } from 'next';
 import { AppProps } from 'next/app';
 import { ReactElement, ReactNode } from 'react';
 
+import { useTransition } from '@/common/hooks';
 import Layout from '@/components/layout';
 import Providers from '@/components/providers';
 import { AuthProvider } from '@/libs/firebase';
@@ -14,6 +15,7 @@ interface MyAppProps extends AppProps {
 }
 
 export default function MyApp(props: MyAppProps) {
+  useTransition();
   const { Component, pageProps } = props;
 
   const getLayout = Component.getLayout ?? ((page) => <Layout>{page}</Layout>);
