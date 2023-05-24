@@ -12,22 +12,24 @@ type UserListPageProps = {
 };
 
 export default function UserListPage(props: UserListPageProps) {
-  const { post } = useFetch();
+  const { post, destroy } = useFetch();
   const [users, setUser] = useState<User[]>(props.users);
 
   const handleSubmitNew = async (data: UserNew) => {
     const res = await post<User>('/api/users', data);
-
-    console.log('handleSubmitNew res', res);
-
     const newUser = res.content;
     setUser((prev) => [newUser, ...prev]);
+  };
+
+  const handleClickDelete = async (userId: string) => {
+    await destroy<User>(`/api/users/${userId}`);
+    setUser((prev) => prev.filter((user) => user.id !== userId));
   };
 
   return (
     <>
       <UserNewForm onSubmit={handleSubmitNew} />
-      <UserList users={users} />
+      <UserList users={users} onDelete={handleClickDelete} />
     </>
   );
 }

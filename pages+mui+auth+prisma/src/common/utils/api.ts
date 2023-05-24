@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 
 import { LackParamsError } from '../constant';
 
-type Methods = 'GET' | 'POST';
+type Methods = 'GET' | 'POST' | 'DELETE';
 
 interface ResponseError extends Error {
   status?: number;

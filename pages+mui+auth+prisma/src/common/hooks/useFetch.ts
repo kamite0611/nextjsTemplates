@@ -66,9 +66,21 @@ export const useFetch = () => {
     return await fetchRequest<T>(url, requestOptions);
   }
 
+  /** customize DELETE request */
+  async function destroy<T>(url: string, body?: Record<string, any>, config?: FetchConfig) {
+    const requestOptions: FetchConfig = {
+      body: JSON.stringify(body),
+      method: 'DELETE',
+      headers: await genHeader(config?.useAuth),
+      ...config,
+    };
+    return await fetchRequest<T>(url, requestOptions);
+  }
+
   return {
     get,
     post,
+    destroy,
     loading,
   };
 };
