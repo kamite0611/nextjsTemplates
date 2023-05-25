@@ -1,6 +1,6 @@
 import { Noto_Sans_JP, Roboto } from 'next/font/google';
 
-import { pxToRem, responsiveFontSizes } from '../common/utils/getFontValue';
+import { pxToRem, responsiveFontSizes } from '../../common/utils/getFontValue';
 
 // ----------------------------------------------------------------------
 
