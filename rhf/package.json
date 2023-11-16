@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "yarn db:pull && next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "yarn lint --fix && prettier --write src/ "
+    "lint:fix": "yarn lint --fix && prettier --write src/ ",
+    "db:pull": "npx prisma db pull",
+    "db:push": "npx prisma db push"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",

@@ -1,4 +1,3 @@
-import { GetServerSideProps } from 'next';
 import { useState } from 'react';
 
 import { User } from '@prisma/client';
@@ -47,7 +46,7 @@ export default function UserListPage(props: UserListPageProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getStaticProps = async () => {
   const users = await getUsers();
   return { props: { users } };
 };

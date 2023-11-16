@@ -1,4 +1,4 @@
-import { GetServerSideProps } from 'next';
+import { GetStaticPaths, GetStaticProps } from 'next';
 
 import { User } from '@prisma/client';
 
@@ -18,8 +18,15 @@ export default function UserDetailPage(props: UserDetailPageProps) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const userId = context.query.userId as string;
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const userId = params?.userId as string;
 
   const user = await findUser(userId);
 

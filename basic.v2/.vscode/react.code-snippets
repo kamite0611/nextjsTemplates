@@ -35,7 +35,7 @@
     "body": [
       "import { NextApiRequest, NextApiResponse } from 'next';",
       "",
-      "import { handleApiRoute } from '@/common/utils';",
+      "import { handleApiRoute } from '@/common/utils/api';",
       "",
       "type $1Req = any;",
       "type $1Res = any;",
@@ -52,6 +52,12 @@
       "  });",
       "}"
     ],
-    "description": "Reactページの雛形"
+    "description": "Next.js API Routeの雛形"
+  },
+  "MUI styled snippet": {
+    "scope": "typescriptreact",
+    "prefix": "st",
+    "body": ["const Styled$1 = styled($1)(({ theme }) => ({}))"],
+    "description": "muiのstyled()のスニペット"
   }
 }
